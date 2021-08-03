@@ -21,6 +21,7 @@ module.exports = (app) => {
     res.redirect('/');
   });
 
+  // req.user is automatically assigned by passport.js
   app.get('/api/current_user', (req, res) => {
     res.send(req.user);
   })
